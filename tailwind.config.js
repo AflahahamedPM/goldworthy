@@ -10,8 +10,21 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        lightGrey: "#8b8e8a",
+        darkGrey:"#5a5d59",
+        myGrey : "#cececd"
       },
+      fontFamily:{
+        necto:['Necto-Mono']
+      }
     },
   },
   plugins: [],
+  corePlugins: {
+    scrollbar: false, 
+  },
+  variants: {
+    extend: {},
+  },
+
 };

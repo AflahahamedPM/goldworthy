@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+body::-webkit-scrollbar{
+display: none;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: 'Necto-Mono';
+  src: url('../app/fonts/NectoMono-Regular.woff2') format('woff2');
+  font-weight:10;
+  font-style: normal;
+}
+
+.underline-animation {
+  display: inline-block;
+  padding-bottom:2px;
+  background-image: linear-gradient(#ffff, #ffff);
+  background-position: 0 100%; 
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; 
+}
+
+.underline-animation:hover {
+  background-position: 100% 100%;
+  background-size: 100% 1px;
 }
