@@ -31,13 +31,11 @@ export const ModalProvider = ({ children }) => {
         Contact: "/contact",
       };
       
-      console.log(routes[selectedItem]);
-      
       if (routes[selectedItem]) {
         openNCloseModal();
         setTimeout(() => {
           window.location.href = routes[selectedItem];
-        }, 700);
+        }, 900);
         return;
       }
   

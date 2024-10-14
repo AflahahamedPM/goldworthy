@@ -7,6 +7,7 @@ import SecondModal from "@/components/SecondModal";
 import Link from "next/link";
 import { cardsData } from "@/constants/cardData";
 import Card from "@/components/Card";
+import Footer from "@/components/Footer";
 
 const About = () => {
   const { openNCloseModal, isShowedSecondModal } = useModalContext();
@@ -34,7 +35,7 @@ const About = () => {
             open by appointment.
           </h1>
           <button
-            className="text-myGrey mr-10 flex justify-end mb-10 opacity-[0.7] font-necto fixed right-2 top-9"
+            className="text-myGrey ttext-sm mr-10 flex justify-end mb-10 opacity-[0.7] font-necto fixed right-2 top-9"
             onClick={!isShowedSecondModal ? () => openNCloseModal() : undefined}
           >
             Menu
@@ -51,6 +52,7 @@ const About = () => {
             />
           ))}
         </div>
+        <Footer />
       </div>
       <AnimatePresence mode="wait">
         {isShowedSecondModal && (

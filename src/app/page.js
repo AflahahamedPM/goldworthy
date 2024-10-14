@@ -53,10 +53,10 @@ export default function App() {
       </div>
       <AnimatePresence mode="wait">
         {isShowedSecondModal && (
-          <>
+          <aside>
             <FirstModal />
             <SecondModal />
-          </>
+          </aside>
         )}
       </AnimatePresence>
     </>
